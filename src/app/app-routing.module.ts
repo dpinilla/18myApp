@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'datos/:id',
+    loadChildren: () => import('./datos/datos.module').then( m => m.DatosPageModule)
+  },
+  {
+    path: 'natacion',
+    loadChildren: () => import('./natacion/natacion.module').then( m => m.NatacionPageModule)
+  },
+  {
+    path: 'tenis',
+    loadChildren: () => import('./tenis/tenis.module').then( m => m.TenisPageModule)
+  },
+  {
+    path: 'futbol',
+    loadChildren: () => import('./futbol/futbol.module').then( m => m.FutbolPageModule)
+  },
 ];
 
 @NgModule({
